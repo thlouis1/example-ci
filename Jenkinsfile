@@ -1,18 +1,20 @@
 pipeline {
-agent any
-stages {
-stage(’Build’) {
-steps {
-sh "npm install" 
-sh "npm install grunt-cli" 
-sh "./node_modules/grunt-cli/bin/grunt"
-}
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+		sh "npm install" 
+		sh "npm install grunt-cli" 
+		sh "./node_modules/grunt-cli/bin/grunt"
+            }
+        }
+    }
+    post {
+        always {
+           
 
-}
-stage(’Deploy’) {
-steps {
-sh "echo ’Deploying....’"
-}
-}
-}
+
+        }
+     
+    }
 }
