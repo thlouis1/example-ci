@@ -3,7 +3,7 @@ agent any
 stages {
 stage(’Build’) {
 steps {
-sh "npm install" + "npm install grunt-cli" + "./node_modules/grunt-cli/bin/grunt"
+sh "cd /home/azerty/Documents/git-jenkins/example-ci" + "npm install" + "npm install grunt-cli" + "./node_modules/grunt-cli/bin/grunt"
   
 }
 }
