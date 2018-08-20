@@ -1,3 +1,15 @@
-npm install
-npm install grunt-cli
-./node_modules/grunt-cli/bin/grunt
+pipeline {
+agent any
+stages {
+stage(’Build’) {
+steps {
+sh "npm install"
+  
+}
+}
+stage(’Deploy’) {
+steps {
+sh "echo ’Deploying....’"
+}
+}
+}
