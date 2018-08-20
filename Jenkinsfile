@@ -11,7 +11,7 @@ pipeline {
     }
     post {
         always {
-           	archiveArtifacts artifacts: 'build/libs/**/*.jar', 
+           	archiveArtifacts artifacts: 'website.tgz', 
 		fingerprint: true 
 
 
