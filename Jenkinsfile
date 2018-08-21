@@ -7,6 +7,7 @@ pipeline {
 		sh "npm install grunt-cli" 
 		sh "./node_modules/grunt-cli/bin/grunt"
             }
+            }
 	      stage('Packaging') {
 		      steps {
 		sh "tar cfz website.tgz _less.github.io" 
@@ -14,6 +15,7 @@ pipeline {
             }
         }
     }
+
     post {
         always {
            	archiveArtifacts artifacts: 'website.tgz', 
@@ -24,4 +26,3 @@ pipeline {
      
     }
 }
-
